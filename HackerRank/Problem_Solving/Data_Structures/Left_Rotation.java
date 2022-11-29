@@ -28,14 +28,9 @@ class Result {
 		for (int i = 0; i < d; i++) {
 			arr.add(arr.get(0));
 			arr.remove(0);
-			System.out.print(i);
-			System.out.println(arr);
 		}
-
 		return arr;
-
 	}
-
 }
 
 public class Solution {
