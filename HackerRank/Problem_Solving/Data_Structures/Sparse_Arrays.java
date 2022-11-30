@@ -23,18 +23,26 @@ class Result {
 
 	public static List<Integer> matchingStrings(List<String> stringList, List<String> queries) {
 		// Write your code here
-		int counter = 0;
 		List<Integer> newArray = new ArrayList<Integer>();
 
-		for (int i = 0; i <= stringList.size() - 1; i++) {
-			for (int k = 0; k < queries.size(); k++) {
-				System.out.println(stringList.size());
-				System.out.println(queries.size());
-				if (stringList.get(i) == queries.get(k)) {
+		for (int i = 0; i < queries.size(); i++) {
+			int counter = 0;
+			for (int k = 0; k < stringList.size(); k++) {
+
+				System.out.println(stringList.get(k));
+				System.out.println(queries.get(i));
+				System.out.println("i:" + i);
+				System.out.println("k:" + k);
+
+				if ((stringList.get(k)).equals(queries.get(i))) {
+
 					counter++;
+					System.out.println("counter");
+					System.out.println(counter);
 				}
-				System.out.println(counter);
+
 			}
+			newArray.add(counter);
 		}
 		return newArray;
 
